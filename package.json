@@ -1,12 +1,12 @@
 {
-  "name": "boilerplate",
+  "name": "ellie-evans-rocks",
   "version": "1.0.0",
-  "description": "A starter HTML site using Bootstrap, SASS, & Gulp.",
+  "description": "The author of this site kinda rocks.",
   "main": "_dist/index.html",
   "author": "Elizabeth Evans",
-  "title": "Boilerplate",
-  "repository": "https://github.com/evansekeful/_boilerplate",
-  "url": "https://github.com/evansekeful/_boilerplate",
+  "title": "Ellie Evans Dot Rocks",
+  "repository": "https://github.com/evansekeful/ellie-evans-rocks",
+  "url": "https://github.com/evansekeful/ellie-evans-rocks",
   "ga": "Google Tracking ID",
   "license": "MIT",
   "devDependencies": {
