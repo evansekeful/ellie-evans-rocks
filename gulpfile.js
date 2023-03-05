@@ -92,7 +92,7 @@ gulp.task('html', gulp.series('concat', function() {
 // Copy fonts, images, and vendor libraries into /_dist
 gulp.task('copy', async function() {
     // Images
-    gulp.src('./_src/img/*')
+    gulp.src('./_src/img/*/**')
         .pipe(gulp.dest('./_dist/img'))
     // Fonts
     gulp.src('./_src/css/fonts/*')
