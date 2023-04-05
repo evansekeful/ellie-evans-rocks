@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var header = require('gulp-header');
-var del = require('del');
 var fonts = require('gulp-google-webfonts');
+var del = require('del');
 var sass = require('gulp-sass')(require('node-sass'));
 var cleancss = require('gulp-clean-css');
 var rename = require('gulp-rename');
@@ -9,7 +9,7 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var prettify = require('gulp-html-prettify')
 var inject = require('gulp-inject');
-var ga = require('gulp-ga');
+var gtag = require('gulp-gtag');
 var pkg = require('./package.json');
 
 // Set the banner content
@@ -84,7 +84,7 @@ gulp.task('concat', function() {
 // Write HTML files and copy into /_dist TODO inject scripts
 gulp.task('html', gulp.series('concat', function() {
     return gulp.src('./_src/html/staged/*.html')
-    .pipe(ga({url: pkg.url, uid: pkg.ga}))
+    .pipe(gtag({uid: pkg.gtag,minify: true}))
     .pipe(prettify({indent_char: '  ', indent_size: 1}))
     .pipe(gulp.dest('./_dist'))
 }));
